@@ -1,30 +1,25 @@
-@mixin font($font_name, $file_name, $weight, $style) {
-    @font-face {
-        font-family: $font_name;
-        font-display: swap;
-        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-        font-weight: #{$weight};
-        font-style: #{$style};
-    }
-}
 
+
+@import url("https://fonts.googleapis.com/css?family=Roboto: 300, regular, 500, 700, &display=swap&subset=cyrillic-ext");
 @import "fonts";
 
-body {
-    font-size: 10px;
-    display: flex;
+
+$fontFamily: "Roboto";
+
+
+
+$minWidth: 320px;
+$maxWidth: 1400;
+$maxWidthContainer: 1140;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+._container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    padding: 0px 20px;
 }
 
-span {
-    font-size: 40px;
-    @media (max-width: 76px) {
-        font-size: 15px;
-    }
-}
-
-div {
-    font-size: 50px;
-    @media (max-width: 76px) {
-        font-size: 20px;
-    }
-}
